@@ -67,6 +67,7 @@ public class OrderController {
 	public ResponseEntity<OrderResource> updateOrder(@PathVariable Long id, @RequestBody Order updatedOrder) {
 		boolean wasUpdated = repository.update(id, updatedOrder);
 		System.out.println("First Commit");
+		System.out.println("Second commit");
 		if (wasUpdated) {
 			return findOrderById(id);
 		}
